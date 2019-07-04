@@ -1,10 +1,12 @@
-const url = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/questions.json';
+const url = 'test.json'
+//const url = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/questions.json';
 // const url = 'questions.json'; /* Если “questions.json” уже находится в папке */
 fetch(url)
 .then(res => res.json())
 .then(quiz => {
 view.start.addEventListener('click', () => game.start(quiz.questions), false); view.response.addEventListener('click', (event) => game.check(event), false);
 });
+console.log(url)
 function random(a, b = 1) {
     // Если передан только 1-й аргумент, значения a и b обмениваются
     if (b === 1) {
