@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo+Da|Roboto');
 body{
-  background: #5F1C1C;
+  background: rgb(196, 186, 186);
   font-family: 'Roboto', sans-serif;
 }
 .dojo{
@@ -20,7 +20,7 @@ body{
   box-shadow: 4px 4px 11px 3px rgba(0,0,0,0.3);
 }
 h1{
-  color: #611BBD;
+  color: rgb(3, 10, 7);
   font-family: 'Baloo Da', cursive;
   font-weight: 900;
   text-align: center;
