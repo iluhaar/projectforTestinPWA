@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta name='description' content='Тест'>
+<link rel="manifest" href="manifest.json">
+
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="application-name" content="testapp">
+<meta name="apple-mobile-web-app-title" content="testapp">
+<meta name="theme-color" content="#161414">
+<meta name="msapplication-navbutton-color" content="#161414">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="msapplication-starturl" content="/main.html">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" type="image/png" sizes="36x36" href="image/icons/android-icon-36x36.png">
+<link rel="apple-touch-icon" type="image/png" sizes="36x36" href="image/icons/android-icon-36x36.png">
+<link rel="icon" type="image/png" sizes="48x48" href="image/icons/android-icon-48x48.png">
+<link rel="apple-touch-icon" type="image/png" sizes="48x48" href="image/icons/android-icon-48x48.png">
+<link rel="icon" type="image/png" sizes="72x72" href="image/icons/android-icon-72x72.png">
+<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="image/icons/android-icon-72x72.png">
+<link rel="icon" type="image/png" sizes="96x96" href="image/icons/android-icon-96x96.png">
+<link rel="apple-touch-icon" type="image/png" sizes="96x96" href="image/icons/android-icon-96x96.png">
+<link rel="icon" type="image/png" sizes="144x144" href="image/icons/android-icon-144x144.png">
+<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="image/icons/android-icon-144x144.png">
+<link rel="icon" type="image/png" sizes="192x192" href="image/icons/android-icon-192x192.png">
+<link rel="apple-touch-icon" type="image/png" sizes="192x192" href="image/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="57x57" href="image/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="image/icons/apple-icon-57x57.png">
+<link rel="icon" type="image/png" sizes="60x60" href="image/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="image/icons/apple-icon-60x60.png">
+<link rel="icon" type="image/png" sizes="72x72" href="image/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="image/icons/apple-icon-72x72.png">
+<link rel="icon" type="image/png" sizes="76x76" href="image/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="image/icons/apple-icon-76x76.png">
+<link rel="icon" type="image/png" sizes="114x114" href="image/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="image/icons/apple-icon-114x114.png">
+<link rel="icon" type="image/png" sizes="120x120" href="image/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="image/icons/apple-icon-120x120.png">
+<link rel="icon" type="image/png" sizes="144x144" href="image/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="image/icons/apple-icon-144x144.png">
+<link rel="icon" type="image/png" sizes="152x152" href="image/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="image/icons/apple-icon-152x152.png">
+<link rel="icon" type="image/png" sizes="180x180" href="image/icons/apple-icon-180x180.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="image/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="70x70" href="image/icons/ms-icon-70x70.png">
+<link rel="apple-touch-icon" type="image/png" sizes="70x70" href="image/icons/ms-icon-70x70.png">
+<link rel="icon" type="image/png" sizes="144x144" href="image/icons/ms-icon-144x144.png">
+<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="image/icons/ms-icon-144x144.png">
+<link rel="icon" type="image/png" sizes="150x150" href="image/icons/ms-icon-150x150.png">
+<link rel="apple-touch-icon" type="image/png" sizes="150x150" href="image/icons/ms-icon-150x150.png">
+<link rel="icon" type="image/png" sizes="310x310" href="image/icons/ms-icon-310x310.png">
+<link rel="apple-touch-icon" type="image/png" sizes="310x310" href="image/icons/ms-icon-310x310.png">
+<link rel="icon" type="image/png" sizes="512x512" href="image/icons/icon512x512">
+<link rel="apple-touch-icon" type="image/png" sizes="512x512" href="image/icons/icon512x512">
+<title>Тест</title>
+<link rel='stylesheet' href='style.css'>
+</head>
+<body>
+<script>
+if('serviceWorker' in navigator) {
+    navigator.serviceWorker
+             .register('/sw.js')
+             .then(function() { console.log("Service Worker Registered"); });
+  }
+</script>        
+<section class='dojo'>
+<div class='quiz-body'>
+<header>
+        <header>
+               <div id='timer'>Time: <strong>20</strong></div>
+                <div id='score'>Score: <strong>0</strong></div>
+                <div id='hiScore'>High Score: <strong></strong></div>
+                <h1>Проходим тест</h1> 
+                </header>
+                
+</header>
+<div id='question'></div>
+<div id='response'></div>
+<div id='result'></div>
+<div id='info'></div>
+
+<button id='start'>Click to Start</button>
+
+
+<input id="Nfile" name='newFile' type="file"> 
+<input  in="UPfile" type="submit"> Upload new questions</input>
+</div>
+</section>
+<script src='main.js'></script>
+</body>
+</html>
+
